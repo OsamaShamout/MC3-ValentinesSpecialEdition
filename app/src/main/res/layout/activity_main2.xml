@@ -6,4 +6,171 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <TextView
+        android:id="@+id/textScoreTable"
+        android:layout_width="290dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#9E81BE"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textScore"
+        app:layout_constraintTop_toBottomOf="@+id/loveTest"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="335dp"
+        android:layout_marginBottom="30dp"
+        android:background="#FFFFFF"
+        android:onClick="OnClickBackButton"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/textName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/listOfLanguages"
+        android:layout_width="246dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLanguage"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/loveTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="124dp"
+        android:backgroundTint="#9E81BE"
+        android:onClick="OnClickShowLove"
+        android:text="Show Me The Love!"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLanguage" />
+
+    <TextView
+        android:id="@+id/textLanguage"
+        android:layout_width="383dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="169dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif-black"
+        android:text="And your favorite language is?"
+        android:textColor="#9E81BE"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toTopOf="@+id/listOfLanguages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameEntry" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="358dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Please enter your name"
+        android:textColor="#9E81BE"
+        android:textSize="27sp"
+        app:layout_constraintBottom_toTopOf="@+id/nameEntry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <EditText
+        android:id="@+id/nameEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="14dp"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Enter your full name"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@id/textLanguage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textName" />
+
+    <TextView
+        android:id="@+id/textPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="18dp"
+        android:textColor="#9E81BE"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/textResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/listOfLanguages" />
+
+    <ImageView
+        android:id="@+id/imageLanguage"
+        android:layout_width="145dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toStartOf="@+id/textPercentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listOfLanguages"
+        app:srcCompat="@color/white" />
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:textColor="#9E81BE"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageLanguage"
+        app:layout_constraintTop_toBottomOf="@+id/textPercentage" />
+
+    <TextView
+        android:id="@+id/textScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="77dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Scores"
+        android:textColor="#9E81BE"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textScoreTable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLanguage"
+        app:layout_constraintVertical_bias="0.584" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

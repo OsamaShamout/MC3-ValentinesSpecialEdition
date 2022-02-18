@@ -9,11 +9,53 @@
     android:backgroundTint="#9E81BE"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="517dp"
+        android:layout_height="896dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.727"
+        app:srcCompat="@drawable/image_1" />
+
     <TextView
-        android:id="@+id/mainText"
+        android:id="@+id/readyText"
+        android:layout_width="300dp"
+        android:layout_height="238dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="283dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Ready to test the love?"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
+        android:translationZ="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/goButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.689"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <Button
+        android:id="@+id/goButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="gegeg"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="106dp" />
+        android:layout_height="60dp"
+        android:layout_marginTop="500dp"
+        android:width="250dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="OnClickMoveToSecondMain"
+        android:text="Let's Go"
+        android:textColor="#745F9A"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundImage"
+        app:layout_constraintVertical_bias="0.862" />
 </androidx.constraintlayout.widget.ConstraintLayout>
