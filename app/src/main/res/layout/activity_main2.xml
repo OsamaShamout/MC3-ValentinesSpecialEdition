@@ -142,7 +142,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textPercentage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listOfLanguages"
-        app:srcCompat="@color/white" />
+        app:srcCompat="@drawable/java" />
 
     <TextView
         android:id="@+id/textResult"
