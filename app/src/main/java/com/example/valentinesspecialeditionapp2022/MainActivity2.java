@@ -97,7 +97,10 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
             lanuage_image.setImageResource(R.drawable.php);
         }
         if(language_chosen.equalsIgnoreCase("JavaScript")){
+            lanuage_image.setX(-1000);
+            lanuage_image.animate().translationXBy(1000).rotation(360).setDuration(1000);
             lanuage_image.setImageResource(R.drawable.js);
+
         }
         if(language_chosen.equalsIgnoreCase("SQL")){
             lanuage_image.setX(-1000);
