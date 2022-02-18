@@ -19,6 +19,7 @@ import java.util.Random;
 
 public class MainActivity2 extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
+    private int counter =0;
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
@@ -48,6 +49,7 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
 
     //Take name and language, generate a random number and store in table.
     public void OnClickShowLove(View view){
+        counter++;
 
         //Define name, language, image, and texts for Java.
         EditText full_name = (EditText) findViewById(R.id.nameEntry);
@@ -111,13 +113,15 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
             lanuage_image.setX(-1000);
             lanuage_image.animate().translationXBy(1000).rotation(360).setDuration(1000);
             lanuage_image.setImageResource(R.drawable.question_mark);
+            text_output.setText("Please enter a valid language.");
+            return;
         }
 
         //Print out result string
         String value_score = String.valueOf(score);
 
         text_percentage.setText(value_score + "%");
-        
+
         if(score >= 80){
             text_output.setText("Wow. That much love!");
         }
@@ -135,7 +139,13 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
         String text_scores = value_score + "\t" + language_chosen + "\t\t - " + user_name + "\n";
         text_table.append(text_scores);
 
+        //Reset score after 3 trials.
+        if(counter==4){
+            text_table.setText("");
+            text_table.append(text_scores);
+        }
     }
+
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
