@@ -116,8 +116,8 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
         //Print out result string
         String value_score = String.valueOf(score);
 
-        text_percentage.setText(value_score);
-
+        text_percentage.setText(value_score + "%");
+        
         if(score >= 80){
             text_output.setText("Wow. That much love!");
         }
