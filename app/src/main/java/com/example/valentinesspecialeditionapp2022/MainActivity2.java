@@ -146,7 +146,9 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
         if(counter==4){
             text_table.setText("");
             text_table.append(text_scores);
+            counter = 1;
         }
+
     }
 
 
